@@ -4,7 +4,7 @@
 int8_t g_status;
 uint32_t p_data;
 
-double a[5] = {5,4,3,2,1};
+double arr[5] = {5,4,3,2,1};
 double res_value = 2;
 
 int8_t dichotomous_search(void* arr, uint32_t data_type_len, uint32_t data_len, void* target,
@@ -14,7 +14,7 @@ static int8_t float_compare_func(void* m1, void* m2);
 int main()
 {
     
-    g_status = dichotomous_search(a, sizeof(double), 5, &res_value, float_compare_func ,&p_data);
+    g_status = dichotomous_search(arr, sizeof(double), 5, &res_value, float_compare_func ,&p_data);
     printf("p_data:%d\n", p_data);
     printf("g_status:%d\n", g_status);
     return 0;
